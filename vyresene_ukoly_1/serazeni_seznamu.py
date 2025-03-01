@@ -8,7 +8,7 @@ def serazeni_seznamu():
     print("Vítej v programu, který vytvoří seznam náhodných čísel a seřadí ho vzestupně")
 
     # Vytvoření seznamu s 10 náhodnými čísly mezi 1 a 100
-    nahodna_cisla = [random.randint(1, 100) for _ in range(10)]
+    nahodna_cisla = [random.randint(1, 100) for cislo in range(10)]
 
     print("Původní seznam:", nahodna_cisla)  # Výpis před seřazením
 
