@@ -14,5 +14,6 @@ def abs_hodnota():
     cislo_2 = float(input("Zadej druhé číslo: "))
     print(f"rozdíl mezi {cislo_1} a {cislo_2} je {abs(cislo_1 - cislo_2):.2f}")
 
+
 if __name__ == '__main__':
     abs_hodnota()
