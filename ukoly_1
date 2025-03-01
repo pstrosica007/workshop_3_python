@@ -1,0 +1,42 @@
+
+### 1. Logické operátory (AND, OR, NOT)
+1️⃣ Napište podmínku, která vrátí `True`, pokud `x` je větší než 10 **a zároveň** menší než 50.
+2️⃣ Napište podmínku, která vrátí `True`, pokud `y` je menší než 5 **nebo** větší než 20.
+3️⃣ Napište podmínku, která vrátí `True`, pokud `z` **není** rovno nule.
+
+### 2. If - elif - else
+4️⃣ Napište program, který na základě věku určí, zda je osoba dítě (do 12 let), teenager (13-17), dospělý (18-64) nebo senior (65+).
+5️⃣ Napište program, který přijme číslo od uživatele a určí, zda je kladné, záporné nebo nula.
+
+### 3. While smyčka
+6️⃣ Napište program, který bude **opakovaně** žádat uživatele o zadání čísla, dokud nezadá číslo větší než 100.
+7️⃣ Napište program, který počítá **sčítání čísel od 1 do 10** pomocí `while` smyčky.
+
+### 4. For smyčka
+8️⃣ Napište `for` smyčku, která vypíše všechna sudá čísla od 1 do 20.
+9️⃣ Vypište jednotlivé znaky ve slově `"Python"` pomocí `for` smyčky.
+
+### 5. Absolutní hodnota (abs)
+🔟 Napište program, který přijme číslo od uživatele a vypíše jeho absolutní hodnotu.
+1️⃣1️⃣ Napište program, který porovná dvě čísla a zjistí jejich **vzdálenost na číselné ose**.
+
+### 6. Seřazení seznamu (sort)
+1️⃣2️⃣ Napište program, který vytvoří seznam náhodných čísel a seřadí ho vzestupně.
+1️⃣3️⃣ Napište program, který seřadí seznam slov podle abecedy.
+
+### 7. Medián
+1️⃣4️⃣ Napište program, který přijme seznam čísel od uživatele a najde jejich **medián**.
+
+### 8. F-string (formátování textu)
+1️⃣5️⃣ Napište program, který přijme jméno a věk uživatele a vypíše větu `"Ahoj, jmenuji se [jméno] a je mi [věk] let."` pomocí f-string.
+
+### 9. Mapování hodnot (map)
+1️⃣6️⃣ Napište program, který převede seznam číselných řetězců (např. `["1", "2", "3"]`) na čísla pomocí `map()`.
+1️⃣7️⃣ Napište program, který převede seznam čísel na jejich druhé mocniny pomocí `map()`.
+
+### 10. Zaokrouhlení čísel (round)
+1️⃣8️⃣ Napište program, který přijme desetinné číslo od uživatele a zaokrouhlí ho na **2 desetinná místa**.
+1️⃣9️⃣ Napište program, který vezme seznam desetinných čísel a zaokrouhlí každé číslo na **1 desetinné místo** pomocí `map()`.
+
+### 11. Rozdělování textu (split)
+2️⃣0️⃣ Napište program, který přijme větu od uživatele a rozdělí ji na jednotlivá slova pomocí `split()`.
