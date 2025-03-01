@@ -2,6 +2,8 @@
 # Napište podmínku, která vrátí `True`, pokud `x` je větší než 10 a zároveň menší než 50.
 # Napište podmínku, která vrátí `True`, pokud `y` je menší než 5 nebo větší než 20.
 # Napište podmínku, která vrátí `True`, pokud `z` není rovno nule.
+
+
 def logical_operands():
     x = int(input("Zadej prosím číslo: "))
     if x in range(10, 51):
