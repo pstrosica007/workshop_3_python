@@ -27,6 +27,7 @@ def serad_slova():
     serazeny = sorted(seznam_slov, key=str.lower)
     print(f"Seřazený seznam: {serazeny}")
 
+
 if __name__ == '__main__':
     serad_cisla()
     serad_slova()
