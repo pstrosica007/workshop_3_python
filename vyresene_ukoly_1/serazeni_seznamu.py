@@ -3,32 +3,30 @@
 # Napište program, který seřadí seznam slov podle abecedy.
 
 import random
-def serazeni_seznamu():
 
-    print("Vítej v programu, který vytvoří seznam náhodných čísel a seřadí ho vzestupně")
+def serad_cisla():
+    """Vytvoří seznam náhodných čísel a seřadí ho vzestupně."""
+    print("\nSeřazení náhodných čísel:")
 
-    # Vytvoření seznamu s 10 náhodnými čísly mezi 1 a 100
+    # Generování seznamu náhodných čísel
     nahodna_cisla = [random.randint(1, 100) for _ in range(10)]
+    print(f"Původní seznam: {nahodna_cisla}")
 
-    print("Původní seznam:", nahodna_cisla)  # Výpis před seřazením
+    # Seřazení seznamu
+    serazeny = sorted(nahodna_cisla)
+    print(f"Seřazený seznam: {serazeny}")
 
-    nahodna_cisla.sort()  # Seřazení vzestupně
-
-    print("Seřazený seznam:", nahodna_cisla)  # Výpis po seřazení
-
-
-
-    print("Vítej v programu, který seřadí seznam slov podle abecedy")
+def serad_slova():
+    """Seřadí seznam slov podle abecedy."""
+    print("\nSeřazení seznamu slov:")
+    
     seznam_slov = ["Jahoda", "Jablko", "Citron", "Malina", "Kiwi"]
+    print(f"Původní seznam: {seznam_slov}")
 
-    # Seřazení seznamu abecedně
-    seznam_slov.sort()
-
-    # Výpis seřazeného seznamu
-    print("Seřazený seznam slov:")
-    for slovo in seznam_slov:
-        print(slovo)
-
+    # Seřazení slov bez ohledu na velká/malá písmena
+    serazeny = sorted(seznam_slov, key=str.lower)
+    print(f"Seřazený seznam: {serazeny}")
 
 if __name__ == '__main__':
-    serazeni_seznamu()
+    serad_cisla()
+    serad_slova()
