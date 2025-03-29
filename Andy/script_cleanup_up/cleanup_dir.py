@@ -11,7 +11,7 @@ def remove_old_logs_recursive(logs_path, days_old=28, print_to_console=True):
     now = time.time()
     cutoff = now - (days_old * 86400)
 
-    log_filename = os.path.join(logs_directory, "log_cleanup.txt")
+    log_filename = os.path.join(logs_path, "log_cleanup.txt")
     log_file = open(log_filename, "w", encoding="utf-8")
 
     def log(message):
@@ -56,5 +56,5 @@ def remove_old_logs_recursive(logs_path, days_old=28, print_to_console=True):
     log_file.close()
 
 
-logs_directory = "cesta k adresari"
-remove_old_logs_recursive(logs_directory)
+logs_path = "cesta k adresari"
+remove_old_logs_recursive(logs_path)
