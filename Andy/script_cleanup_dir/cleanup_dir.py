@@ -2,8 +2,8 @@
 Nejaky pokec o tom co dany skript dela
 """
 import os
-import time
 import shutil
+import time
 from datetime import datetime
 
 
