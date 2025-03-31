@@ -1,0 +1,12 @@
+1. Vypiš čísla od 1 do 10 pomocí cyklu for.
+2. Vypiš sudá čísla od 1 do 100 pomocí while smyčky.
+3. Zeptej se uživatele na číslo a vypiš, zda je kladné, záporné nebo nula.
+4. Vytvoř seznam 5 jmen a vypiš je každé na nový řádek pomocí for smyčky.
+5. Vytvoř seznam čísel a spočítej jejich součet pomocí for smyčky.
+6. Vytvoř seznam čísel a vypiš pouze ta, která jsou větší než 10.
+7. Požádej uživatele, aby zadal 5 čísel. Ulož je do seznamu a vypiš průměr.
+8. Vytvoř seznam čísel a najdi největší a nejmenší hodnotu.
+9. Napiš program, který se ptá na heslo, dokud uživatel nezadá správné (např. 'tajneheslo').
+10. Vytvoř program, který zjistí, jestli je zadané číslo prvočíslo.
+11. Měj seznam slov a vypiš pouze ta, která mají víc než 4 znaky.
+12. Napiš program, který se zeptá na jméno a vypíše "Ahoj, [jméno]!" dokud nezadáš 'konec'.
