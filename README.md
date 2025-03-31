@@ -39,10 +39,8 @@ Tento repozitář slouží jako podpůrný prostor pro mentoring dvou juniorek (
 ## 💡 Mentoringová poznámka
 
 Tento projekt je veden s důrazem na pochopení, podporu a reálné využití.  
-Chybování je součást procesu. Učíme se spolu, otevřeně a s respektem k tempu každé z nás. 🙌
-A občas se můžeme jenom tak pobavit o tom proč třeba něco udělat tak nebo jinak a jak například použít AI v SW dev.
+Chybování je součást procesu. Učíme se spolu, otevřeně a s respektem. 🙌
 
 ---
 
-*Vytvořeno s radostí a důvěrou v růst.*  
-Mentorka: Andy  
+ Autor: Andy
