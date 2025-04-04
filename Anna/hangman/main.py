@@ -8,7 +8,6 @@ lives = 6
 print(logo)
 
 chosen_word = random.choice(word_list)
-print(chosen_word)
 
 placeholder = ""
 word_length = len(chosen_word)
@@ -18,15 +17,18 @@ print("Word to guess: " + placeholder)
 
 game_over = False
 correct_letters = []
+guessed_letters = []
 
 while not game_over:
 
-    print(f"****************************{lives}/6 LIVES LEFT****************************")
+    print(f"****************************{lives} LIVES LEFT****************************")
     guess = input("Guess a letter: ").lower()
 
-    if guess in correct_letters:
-        print(f"You've already guessed {guess}")
+    if guess in guessed_letters:
+        print(f"You've already guessed {guess}. No life lost.")
+        continue
 
+    guessed_letters.append(guess)
     display = ""
 
     for letter in chosen_word:
@@ -39,6 +41,7 @@ while not game_over:
             display += "_"
 
     print("Word to guess: " + display)
+    print(guessed_letters)
 
     if guess not in chosen_word:
         lives -= 1
