@@ -2,8 +2,8 @@
 Nejaky pokec o tom co dany skript dela
 """
 import os
-import time
 import shutil
+import time
 from datetime import datetime
 
 
@@ -57,4 +57,4 @@ def remove_old_logs_recursive(logs_path, days_old=28, print_to_console=True):
 
 
 logs_directory = "cesta k adresari"
-remove_old_logs_recursive(logs_directory)
+remove_old_logs_recursive(logs_path)

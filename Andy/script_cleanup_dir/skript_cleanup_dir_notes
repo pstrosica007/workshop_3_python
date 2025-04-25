@@ -1,0 +1,36 @@
+postup:
+1. proč je potřeba daný skript?
+2. jaké data se mají mazat? a existují dané data na tom konkrétním prostředí?
+3. za jaké období se data mají mazat/komprimovat a nějak přeukládat?
+4. v jakém jazyce chci psát skript?
+5. definovat promt pro chatgpt - může být na několikrát a může potřebovat manuální zásah a opravy
+6. je skript funkční?
+7. jak často chci spouštět daný skript? na win stroji existuje plánovač úloh
+
+Jak často spouštět skript na mazání logů?
+Doporučení:
+Spouštět 1× denně – např. v noci (např. 2:00 ráno), kdy je systém minimálně vytížený.
+
+Proč právě jednou denně?
+Nepřetěžuješ systém – denní úklid je dostatečně častý, aby se stará data nehromadila,
+ale ne tak častý, aby zatěžoval disk nebo výkon (např. každou hodinu by bylo zbytečné).
+Zaručuje pravidelnost – každý den se skript podívá, co už překročilo nastavenou hranici
+(např. 28 dní), a smaže jen to, co už skutečně přeteklo.
+Není závislý na tom, kdy byl naposledy spuštěn – díky timestampům (os.path.getmtime) ví přesně,
+co je dnes už za hranou.
+Bezpečnost a přehled – denní logovací soubor (log_cleanup.txt) ti vždy ukáže, co se mazalo
+a kdy → vhodné pro kontrolu nebo audity.
+
+Kdy konkrétně?
+02:00 – 03:00 ráno – ideální čas, kdy většina uživatelů nespíše nepracuje
+Nepravidelnost se nehodí – není třeba spouštět to „jen občas“, protože můžeš zapomenout,
+a z logů se stane sněhová koule.
+
+Shrnutí pro zápis do Plánovače úloh (Task Scheduler ve Windows):
+Doporučené astavení:
+Spouštět : Denně
+Čas	: Např. 02:00
+Akce : Spustit program (např. python.exe)
+Argumenty : Cesta k .py souboru
+Pracovní adresář : Adresář, kde skript běží
+

@@ -1,0 +1,23 @@
+# Složka s nastavením PyCharmu
+.idea/
+
+# macOS metadata
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtuální prostředí
+.venv/
+env/
+venv/
+
+# Logy
+*.log
+
+# Jupyter notebook checkpointy
+.ipynb_checkpoints/
+
+# VSCode settings (pokud někdo používá jiný editor)
+.vscode/

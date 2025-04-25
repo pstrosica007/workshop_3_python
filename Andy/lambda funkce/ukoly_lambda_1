@@ -1,0 +1,10 @@
+1. Vytvoř lambda funkci, která vrátí druhou mocninu zadaného čísla.
+2. Napiš lambda funkci, která sečte dvě zadaná čísla.
+3. Použij lambda funkci k seřazení seznamu slov podle délky slova.
+4. Použij lambda funkci uvnitř map(), která převede seznam čísel na jejich dvojnásobky.
+5. Pomocí lambda a filter() získej ze seznamu čísel jen sudá čísla.
+6. Použij lambda a map() k převedení seznamu jmen na jejich délku (počet písmen).
+7. Použij lambda ve funkci sorted(), abys seřadil seznam slov podle posledního písmena.
+8. Vytvoř lambda funkci, která zjistí, zda je číslo větší než 100.
+9. Použij lambda funkci a reduce() pro výpočet součinu všech čísel v seznamu.
+10. Vytvoř slovník, kde klíče jsou jména a hodnoty jsou věky. Pomocí lambda a sorted() seřaď podle věku.
