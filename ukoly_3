@@ -1,0 +1,114 @@
+# 🧠 Úkoly na procvičení (bez řešení) – tuple, list, set, dict, bubble sort, quick sort, rekurze
+
+# --- Tuple ---
+# 1. Vytvoř tuple se třemi prvky (čísla nebo řetězce)
+# 2. Přístup na 2. prvek v tuplu
+# 3. Jak vytvoříš tuple s jedním prvkem?
+# 4. Může tuple obsahovat jiný tuple? Vyzkoušej
+
+# --- List ---
+# 5. Vytvoř list jmen a přidej nové jméno na konec
+# 6. Seřaď list čísel
+# 7. Vyfiltruj z listu jen sudá čísla pomocí list comprehension
+# 8. Změň druhý prvek listu na jiné jméno
+
+# --- Set ---
+# 9. Vytvoř set s čísly, zkus přidat duplikát – co se stane?
+# 10. Vyzkoušej průnik dvou setů
+# 11. Přidej více prvků do setu pomocí update()
+# 12. Zjisti, zda určitá hodnota je v setu
+
+# --- Dict ---
+# 13. Vytvoř dict s klíči "name", "age" a "city"
+# 14. Přidej nový klíč "email"
+# 15. Vyhledej hodnotu podle klíče "name"
+# 16. Iteruj přes všechny klíče a hodnoty
+
+# --- Bubble Sort ---
+# 17. Použij metodu bubble_sort na list čísel [4, 2, 7, 1]
+
+# --- Quick Sort ---
+# 18. Použij metodu quick_sort na list čísel [9, 5, 2, 8, 1]
+
+# --- Rekurze ---
+# 19. Spočítej faktoriál čísla 5 pomocí factorial_recursive
+# 20. Spočítej Fibonacciho číslo na pozici 7 pomocí fibonacci()
+# 21. Co se stane, když zavoláš factorial_recursive(-1)? Proč?
+
+# 🔁 BONUS
+# 22. Napiš funkci, která najde nejhlubší složku v zadané cestě rekurzivně
+# 23. Vytvoř funkci, která spočítá počet všech souborů v adresáři (včetně podsložek)
+
+# ↓ Můžeš použít již existující třídy a funkce k řešení těchto úloh ↓
+
+# --- Dále následuje původní demonstrační kód ---
+
+# Tuple
+example_tuple = (1, 2, 3)
+empty_tuple = ()
+tuple_with_one_element = (5,)
+tuple_nested = ((1, 2), (3, 4))
+
+# List
+example_list = [1, 2, 3, 4]
+example_list.append(5)
+example_list.sort()
+sliced_list = example_list[1:3]
+
+# Set
+example_set = {1, 2, 3}
+example_set.add(4)
+example_set.update([2, 5])
+intersection = example_set.intersection({3, 5, 6})
+
+# Dict
+example_dict = {"name": "Andy", "age": 30}
+example_dict["city"] = "Prague"
+keys = list(example_dict.keys())
+values = list(example_dict.values())
+
+# Bubble Sort příklad
+unsorted_list = [5, 3, 8, 2]
+sorter = Sorter(unsorted_list.copy())
+sorted_result_bubble = sorter.bubble_sort()
+
+# Quick Sort příklad
+unsorted_list2 = [7, 1, 5, 4]
+sorter = Sorter(unsorted_list2.copy())
+sorted_result_quick = sorter.quick_sort()
+
+# Rekurze: faktoriál a fibonacci
+factorial_6 = factorial_recursive(6)
+fibonacci_7 = fibonacci(7)
+
+# Příklad použití se jmény hráček
+players_scores = [
+    {"name": "Zora", "score": 220},
+    {"name": "Andy", "score": 180},
+    {"name": "Eliška", "score": 300},
+    {"name": "Anička", "score": 250}
+]
+
+# Seřadíme hráčky podle skóre (vzestupně)
+def sort_players_by_score(players):
+    return sorted(players, key=lambda p: p["score"])
+
+sorted_players = sort_players_by_score(players_scores)
+
+# Výpis
+print("Faktoriál 5 (rekurzivně):", factorial_recursive(5))
+print("Faktoriál 5 (iterativně):", factorial_iterative(5))
+print("Fibonacci číslo na pozici 6:", fibonacci(6))
+
+print("Hráčky seřazené podle skóre:")
+for player in sorted_players:
+    print(f"{player['name']} – {player['score']}")
+
+print("Seřazené hodnoty (Bubble Sort):", sorted_result_bubble)
+print("Seřazené hodnoty (Quick Sort):", sorted_result_quick)
+print("Tuple example:", example_tuple)
+print("List after sort:", example_list)
+print("Set intersection:", intersection)
+print("Dict keys:", keys)
+print("Faktoriál 6:", factorial_6)
+print("Fibonacci 7:", fibonacci_7)
