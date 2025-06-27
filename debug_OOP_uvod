@@ -1,0 +1,46 @@
+ 1. Debugging v Pythonu – praktický blok
+Cíl: Naučit se efektivně ladit chyby v kódu – ručně i pomocí nástrojů.
+
+🧱 Struktura:
+
+Typy chyb v Pythonu
+SyntaxError, TypeError, NameError, ValueError, RecursionError (vazba na minulé téma)
+Ukázky jednoduchých chyb a proč vznikají
+Základní ladění pomocí print()
+Debugging rekurze (např. faktoriál s print volání)
+Debugging bubble sortu – sledujeme iterace
+Použití pdb (Python Debugger)
+import pdb; pdb.set_trace()
+Základní příkazy: n, s, c, p, q
+Mini příklad s chybou → ladění krok po kroku
+Debugging v IDE (např. PyCharm / VS Code)
+Přidání breakpointu
+Watch proměnných, krokování, call stack
+Cvičení:
+Opravit 3 buggy funkce (třídění, rekurze, dictionary)
+Najít chybu v delší funkci (např. kombinace if/loop)
+🧱 2. Úvod do OOP v Pythonu – teoreticko-praktický blok
+Cíl: Pochopit základy objektově orientovaného programování a umět je použít.
+
+🔍 Témata:
+
+Základní pojmy:
+Objekt, třída, instance, atribut, metoda
+__init__ a co je self
+Rozdíl mezi funkcí a metodou
+Vytvoření jednoduché třídy
+Např. Dog, Book, Player – s atributy a metodami
+Tvorba a práce s instancemi
+Encapsulation a modifikátory přístupu
+Veřejné vs. „soukromé“ proměnné (_, __)
+getter, setter, property
+Rozšířený příklad:
+Třída Sorter – proč dává smysl mít data jako atribut
+Ukázka OOP u quick sort a bubble sort – rozdíl oproti funkcím
+BONUS (na další den):
+Dědičnost a polymorfismus – třída Shape, potomci Circle, Rectangle
+super().__init__() a přepisování metod
+✨ Co může být navíc?
+Quiz „poznáš, co je metoda a co funkce?“
+Oprava špatně napsané třídy
+Reálný mini projekt: Třída FileAnalyzer, která umí počítat slova, řádky a velikost souboru
