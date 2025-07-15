@@ -78,5 +78,42 @@ while zadane_heslo != spravne_heslo:
 print("Přístup povolen.")
 
 #10. Vytvoř program, který zjistí, jestli je zadané číslo prvočíslo.
+
+def prvocislo(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+
+# získání vstupu od uživatele
+
+number = int(input("Zadej libovolné číslo: "))
+
+if prvocislo(number):
+    print(f"{number} je prvočíslo.")
+else:
+    print(f"{number} není prvočíslo.")
+
+
 #11. Měj seznam slov a vypiš pouze ta, která mají víc než 4 znaky.
+seznam_slov = ["big", "smelly", "elephant", "had", "small", "pear", "on", "his", "trunk"]
+
+for slovo in seznam_slov:
+    if len(slovo) > 4:
+        print(slovo)
+
 #12. Napiš program, který se zeptá na jméno a vypíše "Ahoj, [jméno]!" dokud nezadáš 'konec'.
+
+while True:
+    name = input("Zadej své jméno (nebo napiš 'konec' pro ukončení): ")
+    if name.lower() == "konec":
+        print("Program ukončen, zdarec!")
+        break
+    print(f"Ahoj,{name}!")
