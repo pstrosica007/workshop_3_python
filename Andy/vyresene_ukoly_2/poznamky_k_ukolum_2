@@ -1,0 +1,47 @@
+1. try / except – ošetření chyb
+- Používá se, když něco může selhat – např. převod vstupu na int
+- Zabrání tomu, aby program spadl
+Příklad:
+    try:
+        cislo = int(input("Zadej číslo: "))
+    except ValueError:
+        print("To nebylo číslo.")
+
+2. if s else – a kdy else není vhodné
+- else se provede, když žádná předchozí podmínka neplatila
+- není vhodné, když další větev vyžaduje výpočet, ne "automatické tvrzení"
+Příklad:
+    if cislo <= 1:
+        print("Není prvočíslo")
+    elif cislo in (2, 3):
+        print("Je prvočíslo")
+    else:
+        # sem patří výpočet
+
+3. numpy vs. random – náhodná čísla
+numpy:
+    from numpy import random
+    pole = random.randint(0, 100, size=10)
+    # numpy array s 10 čísly od 0 do 99
+random:
+    import random
+    pole = [random.randint(0, 100) for _ in range(10)]
+    # běžný Python list s 10 náhodnými čísly
+
+4. enumerate – číslovaný výpis
+- enumerate vrací (index, hodnota)
+- vhodné pro výpis s pořadím
+Příklad:
+    for i, slovo in enumerate(seznam, start=1):
+        print(f"{i}. {slovo}")
+
+5. min a max – nejmenší a největší hodnota
+- vestavěné (built-in) funkce v Pythonu
+- fungují na iterovatelných strukturách (list, tuple, string…)
+Příklad:
+    cisla = [4, 7, 1, 15]
+    min(cisla) → 1
+    max(cisla) → 15
+
+    slova = ["kočka", "pes", "velryba"]
+    max(slova, key=len) → "velryba"
