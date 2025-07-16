@@ -1,0 +1,53 @@
+
+BONUS ÚKOLY – sada #1 (procvičování témat)
+
+1. try/except
+Zeptej se uživatele na dvě čísla. Ošetři, aby zadal čísla (ne text) a vypočítej jejich podíl (dělení).
+Pozor: ošetři i případ, že by dělil nulou.
+
+2. if/elif/else
+Zeptej se na věk uživatele a podle čísla vypiš, jestli je:
+- dítě (0–12)
+- teenager (13–17)
+- dospělý (18–64)
+- senior (65+)
+
+3. for + if
+Měj seznam čísel a vypiš pouze ta, která jsou lichá a zároveň větší než 10.
+
+4. enumerate
+Měj seznam jídel. Pomocí enumerate vypiš je číslovaně a s komentářem:
+    1. pizza – mňam!
+    2. kapusta – meh
+    3. burger – mňam!
+
+5. enumerate (rozepsaněji)
+Zeptej se uživatele na 5 oblíbených filmů a ulož je do seznamu. Pomocí enumerate vypiš seznam filmů s pořadím:
+    1. Pán prstenů
+    2. Matrix
+    ...
+
+6. min() a max() + náhodný seznam
+Vygeneruj 15 náhodných čísel (0–100) a vypiš:
+- nejmenší
+- největší
+- rozdíl mezi nimi
+
+7. list comprehension
+Ze seznamu čísel vytvoř nový seznam obsahující jen sudá čísla větší než 20.
+
+8. while cyklus
+Opakuj dotaz „Chceš pokračovat? ano/ne“ dokud uživatel nezadá „ne“ – a počítej, kolikrát zadal „ano“.
+
+9. kombinace try/except + for
+Zeptej se uživatele na 5 čísel a ulož je do seznamu. Každý vstup ošetři try/except, aby to byly opravdu čísla.
+Pak vypiš součet a průměr.
+
+10. for/else – prvočíslo
+Zjisti, jestli je číslo zadané uživatelem prvočíslo, pomocí for/else. Bez speciálního případu pro 2 a 3.
+
+11. detekce čísel dělících se třemi
+Vygeneruj 10 náhodných čísel (1–50) a zjisti, která z nich jsou dělitelná 3. Pro každé číslo vypiš:
+    - číslo
+    - zda je dělitelné 3
+    - pokud není, napiš „nedělitelné“

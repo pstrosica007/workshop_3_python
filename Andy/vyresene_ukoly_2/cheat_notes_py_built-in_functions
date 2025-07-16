@@ -1,0 +1,59 @@
+
+PYTHON CHEAT NOTES – užitečné vestavěné funkce
+
+1. sum(iterable)
+- Vrací součet všech hodnot v iterovatelném objektu
+Příklad:
+    sum([1, 2, 3]) → 6
+
+2. min(iterable), max(iterable)
+- Vrací nejmenší / největší hodnotu v seznamu
+Příklad:
+    min([5, 3, 9]) → 3
+    max([5, 3, 9]) → 9
+
+3. sorted(iterable)
+- Vrací nový seřazený seznam
+Příklad:
+    sorted(["Tom", "Anna", "Zuzka"]) → ['Anna', 'Tom', 'Zuzka']
+
+4. reversed(iterable)
+- Vrací iterátor s obráceným pořadím prvků
+Příklad:
+    list(reversed([1, 2, 3])) → [3, 2, 1]
+
+5. any(iterable)
+- Vrátí True, pokud aspoň jedna hodnota je pravdivá
+Příklad:
+    any([0, 0, 5]) → True
+
+6. all(iterable)
+- Vrátí True, jen pokud všechny hodnoty jsou pravdivé
+Příklad:
+    all([1, 2, 3]) → True
+    all([1, 0, 3]) → False
+
+7. len(objekt)
+- Vrací délku seznamu, řetězce, slovníku atd.
+Příklad:
+    len("Andy") → 4
+
+8. type(objekt)
+- Vrací typ objektu
+Příklad:
+    type(5) → <class 'int'>
+
+9. isinstance(hodnota, typ)
+- Ověří, zda hodnota je daného typu
+Příklad:
+    isinstance("text", str) → True
+
+10. zip()
+- Kombinuje více seznamů dohromady (jako sloupce v tabulce)
+Příklad:
+    zip(["A", "B"], [1, 2]) → [('A', 1), ('B', 2)]
+
+Poznámka:
+- Tyto funkce jsou dostupné ihned – není třeba je importovat
+- Říká se jim „built-in“ funkce (vestavěné do jazyka Python)
+
