@@ -237,7 +237,7 @@ Když ho importuješ jako modul: nespustí se nic.
 
 ---
 
-### 9. Jaký je rozdíl mezi Python 2 a Python 3 (high level)?
+### 14. Jaký je rozdíl mezi Python 2 a Python 3 (high level)?
 
 * **Python 2** je zastaralá verze (podpora skončila v roce 2020), zatímco **Python 3** je současný standard.
 * Hlavní rozdíly:
@@ -257,7 +257,7 @@ print("hello")
 
 ---
 
-### 10. Jak Python pracuje s pamětí a garbage collectorem?
+### 15. Jak Python pracuje s pamětí a garbage collectorem?
 
 * Python používá **referenční počítání** – každý objekt má čítač, kolikrát je na něj odkazováno.
 * Když čítač dosáhne nuly, objekt se odstraní.
@@ -270,7 +270,7 @@ print(gc.get_threshold())  # aktuální nastavení GC
 
 ---
 
-### 11. Co je `None`, jak se liší od `False`, `0`, `''`?
+### 16. Co je `None`, jak se liší od `False`, `0`, `''`?
 
 * `None` je speciální objekt značící „nic“, nebo „žádná hodnota“.
 * `0`, `''` a `False` jsou konkrétní hodnoty, které se v logickém kontextu vyhodnocují jako `False`.
@@ -287,7 +287,7 @@ Použití: např. když funkce nic nevrací, automaticky vrátí `None`.
 
 ---
 
-### 12. Co je to `shallow copy` vs `deep copy`?
+### 17. Co je to `shallow copy` vs `deep copy`?
 
 * `Shallow copy` vytvoří novou strukturu, ale vnitřní objekty zůstávají odkazy na původní.
 * `Deep copy` rekurzivně zkopíruje vše, včetně vnořených objektů.
@@ -306,7 +306,7 @@ print(deep)     # [[1, 2], [3, 4]]
 
 ---
 
-### 13. Co je to `__name__ == "__main__"` a proč se používá?
+### 18. Co je to `__name__ == "__main__"` a proč se používá?
 
 * Konstrukce slouží k určení, zda je skript spouštěn přímo nebo importován jako modul.
 * Umožňuje mít v souboru jak kód pro import, tak i pro přímé spuštění.
@@ -324,7 +324,7 @@ Když ho importuješ jako modul: nespustí se nic.
 
 ---
 
-### 14. Vysvětli rozdíl mezi mutable a immutable typy a jak to ovlivňuje chování funkcí
+### 19. Vysvětli rozdíl mezi mutable a immutable typy a jak to ovlivňuje chování funkcí
 
 * **Mutable** objekty (např. `list`, `dict`) lze měnit bez vytvoření nové instance.
 * **Immutable** objekty (např. `int`, `str`, `tuple`) po změně vytváří novou instanci.
@@ -350,7 +350,7 @@ print(x)            # "hello" (původní zůstává)
 
 ---
 
-### 15. Jak se v Pythonu implementuje singleton?
+### 20. Jak se v Pythonu implementuje singleton?
 
 Singleton zajistí, že ze třídy vznikne pouze jedna instance.
 
@@ -372,7 +372,7 @@ print(obj1 is obj2)  # True
 
 ---
 
-### 16. Jaký je rozdíl mezi `staticmethod`, `classmethod`, a běžnou metodou (instancemethod)?
+### 21. Jaký je rozdíl mezi `staticmethod`, `classmethod`, a běžnou metodou (instancemethod)?
 
 | Dekorátor       | Přístup k instanci | Přístup ke třídě | Kdy použít                                |
 | --------------- | ------------------ | ---------------- | ----------------------------------------- |
@@ -382,7 +382,7 @@ print(obj1 is obj2)  # True
 
 ---
 
-### 17. Jak funguje paměťový model v Pythonu? (ref counting, GC)
+### 22. Jak funguje paměťový model v Pythonu? (ref counting, GC)
 
 * Každý objekt má **referenční čítač**, který se zvyšuje/snižuje při přiřazení/odstranění odkazu.
 * Když čítač klesne na 0, objekt se smaže.
@@ -396,7 +396,7 @@ print(sys.getrefcount(x))  # výchozí počet referencí
 
 ---
 
-### 18. Jak funguje `*args`, `**kwargs` a kdy je použít?
+### 23. Jak funguje `*args`, `**kwargs` a kdy je použít?
 
 * `*args` – pro proměnný počet **pozičních argumentů**
 * `**kwargs` – pro proměnný počet **pojmenovaných argumentů**
@@ -413,7 +413,7 @@ log_event("start", 10, 20, user="andy", debug=True)
 
 ---
 
-### 19. Jaký je rozdíl mezi `threading`, `multiprocessing`, a `asyncio`?
+### 24. Jaký je rozdíl mezi `threading`, `multiprocessing`, a `asyncio`?
 
 | Přístup           | Vhodné pro         | Omezení GIL | Typické použití              |
 | ----------------- | ------------------ | ----------- | ---------------------------- |
@@ -455,7 +455,7 @@ asyncio.run(main())
 
 ---
 
-### 20. Co je GIL (Global Interpreter Lock)?
+### 25. Co je GIL (Global Interpreter Lock)?
 
 * GIL je mechanismus v CPythonu, který zajišťuje, že **v daný moment běží pouze jedno vlákno Python kódu**.
 * Způsobuje, že `threading` není efektivní pro **CPU-bound** úlohy.
@@ -463,7 +463,7 @@ asyncio.run(main())
 
 ---
 
-### 21. Kdy použít `async def` místo vláken?
+### 26. Kdy použít `async def` místo vláken?
 
 * Když aplikace provádí **mnoho IO operací** (např. síťové požadavky, čtení ze souboru) a potřebuje obsloužit **velké množství klientů/požadavků najednou**.
 * `async` výrazně šetří prostředky oproti vláknům, ale je vhodný hlavně pro neblokující operace.
@@ -484,7 +484,7 @@ asyncio.run(main())
 
 ---
 
-### 22. Jaký je rozdíl mezi `unittest`, `pytest` a `doctest`?
+### 27. Jaký je rozdíl mezi `unittest`, `pytest` a `doctest`?
 
 | Framework  | Styl psaní          | Výhody                              | Použití                    |
 | ---------- | ------------------- | ----------------------------------- | -------------------------- |
@@ -505,7 +505,7 @@ def add(a, b):
 
 ---
 
-### 23. Jak navrhneš testovat funkci, která zapisuje na disk nebo pracuje s API?
+### 28. Jak navrhneš testovat funkci, která zapisuje na disk nebo pracuje s API?
 
 * **Mockování** – nahradíš reálnou funkcionalitu (např. `open`, `requests.get`) falešnou.
 * **Fixture** – nastavíš testovací prostředí (např. dočasný adresář nebo soubor).
@@ -522,7 +522,7 @@ def test_api(mock_get):
 
 ---
 
-### 24. Co je dependency injection a jak se řeší v Pythonu?
+### 29. Co je dependency injection a jak se řeší v Pythonu?
 
 * Princip, kdy **objekt nebo funkce dostane své závislosti zvenčí**, ne si je sama vytváří.
 * Zvyšuje testovatelnost a flexibilitu.
@@ -545,7 +545,7 @@ notifier.notify()
 
 ---
 
-### 25. Jaké znáš návrhové vzory a kdy bys je použila?
+### 30. Jaké znáš návrhové vzory a kdy bys je použila?
 
 * **Singleton** – např. logger nebo konfigurace (viz otázka 15)
 * **Factory** – vytvoření objektu podle typu nebo vstupu
@@ -572,7 +572,7 @@ s.execute()
 
 ---
 
-### 26. Kdy použít `collections.defaultdict` vs `dict.setdefault`?
+### 31. Kdy použít `collections.defaultdict` vs `dict.setdefault`?
 
 * `defaultdict` automaticky vytvoří výchozí hodnotu, pokud klíč chybí.
 * `setdefault` vytvoří výchozí hodnotu **pouze při ručním přístupu**.
@@ -591,7 +591,7 @@ x.setdefault('a', []).append(1)
 
 ---
 
-### 27. Jaký je rozdíl mezi `pandas` a `numpy`?
+### 32. Jaký je rozdíl mezi `pandas` a `numpy`?
 
 | Knihovna | Primární použití                | Vhodné pro                  |
 | -------- | ------------------------------- | --------------------------- |
@@ -608,7 +608,7 @@ df = pd.DataFrame({"col1": [1, 2], "col2": [3, 4]})
 
 ---
 
-### 28. K čemu slouží `functools.lru_cache`?
+### 33. K čemu slouží `functools.lru_cache`?
 
 * Dekorátor, který **cachuje výsledky funkce** na základě vstupních parametrů.
 * Hodí se pro drahé výpočty s opakovaným vstupem (např. rekurzivní Fibonacci).
