@@ -1,0 +1,42 @@
+
+Základní matematické úkony a operace pro procvičení v Pythonu
+
+Úplné základy:
+1. Sčítání, odčítání, násobení, dělení
+2. Mocniny a odmocniny
+3. Zbytek po dělení a celočíselné dělení
+
+Trochu složitější:
+4. Faktoriál (iterativní i rekurzivní)
+5. Součet/Průměr čísel v seznamu
+6. Vyhledání minima/maxima bez min()/max()
+7. Fibonacciho posloupnost (více variant)
+
+Složitější výzvy:
+8. Největší společný dělitel (NSD) – Eukleidův algoritmus
+9. Nejmenší společný násobek (NSN)
+10. Prvočíslo – kontrola, hledání, Eratosthenovo síto
+11. Zaokrouhlování (nahoru, dolů, klasické)
+12. Generátor Pythagorejských trojic
+
+Praktický úkol:
+
+Zadání:
+Napiš program, který přijme číslo `n` a:
+- Vypíše všechna čísla od 1 do `n`
+- U každého čísla určí:
+    - zda je sudé/liché
+    - zda je dělitelné 3 nebo 5
+    - zda je prvočíslem
+
+Bonus:
+- Spočítej průměr všech prvočísel mezi 1 a `n`
+- Výstup ulož jako slovník:
+{
+    "even": [...],
+    "odd": [...],
+    "div_by_3": [...],
+    "div_by_5": [...],
+    "primes": [...],
+    "prime_avg": ...
+}
