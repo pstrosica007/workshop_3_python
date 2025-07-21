@@ -413,5 +413,219 @@ log_event("start", 10, 20, user="andy", debug=True)
 
 ---
 
+### 19. Jaký je rozdíl mezi `threading`, `multiprocessing`, a `asyncio`?
+
+| Přístup           | Vhodné pro         | Omezení GIL | Typické použití              |
+| ----------------- | ------------------ | ----------- | ---------------------------- |
+| `threading`       | IO-bound           | ✅           | síťové požadavky, stahování  |
+| `multiprocessing` | CPU-bound          | ❌           | paralelizace výpočtů         |
+| `asyncio`         | IO-bound (masivní) | ❌           | tisíce připojení, web služby |
+
+```python
+# Threading
+import threading
+
+def worker():
+    print("Thread běží")
+
+thread = threading.Thread(target=worker)
+thread.start()
+```
+
+```python
+# Multiprocessing
+from multiprocessing import Process
+
+def worker():
+    print("Proces běží")
+
+process = Process(target=worker)
+process.start()
+```
+
+```python
+# Asyncio
+import asyncio
+
+async def main():
+    print("Async funkce")
+
+asyncio.run(main())
+```
+
+---
+
+### 20. Co je GIL (Global Interpreter Lock)?
+
+* GIL je mechanismus v CPythonu, který zajišťuje, že **v daný moment běží pouze jedno vlákno Python kódu**.
+* Způsobuje, že `threading` není efektivní pro **CPU-bound** úlohy.
+* `multiprocessing` a `asyncio` GIL obcházejí – první přes procesy, druhý přes IO neblokující operace.
+
+---
+
+### 21. Kdy použít `async def` místo vláken?
+
+* Když aplikace provádí **mnoho IO operací** (např. síťové požadavky, čtení ze souboru) a potřebuje obsloužit **velké množství klientů/požadavků najednou**.
+* `async` výrazně šetří prostředky oproti vláknům, ale je vhodný hlavně pro neblokující operace.
+
+```python
+import asyncio
+
+async def fetch():
+    await asyncio.sleep(1)
+    return "hotovo"
+
+async def main():
+    result = await fetch()
+    print(result)
+
+asyncio.run(main())
+```
+
+---
+
+### 22. Jaký je rozdíl mezi `unittest`, `pytest` a `doctest`?
+
+| Framework  | Styl psaní          | Výhody                              | Použití                    |
+| ---------- | ------------------- | ----------------------------------- | -------------------------- |
+| `unittest` | Objektově orient.   | součást standardní knihovny         | firemní testovací systémy  |
+| `pytest`   | Funkční, flexibilní | jednoduchý zápis, fixtures          | většina moderních projektů |
+| `doctest`  | přímo v docstringu  | snadné testy příkladů v dokumentaci | dokumentační účely         |
+
+```python
+# Doctest ukázka
+
+def add(a, b):
+    """
+    >>> add(2, 3)
+    5
+    """
+    return a + b
+```
+
+---
+
+### 23. Jak navrhneš testovat funkci, která zapisuje na disk nebo pracuje s API?
+
+* **Mockování** – nahradíš reálnou funkcionalitu (např. `open`, `requests.get`) falešnou.
+* **Fixture** – nastavíš testovací prostředí (např. dočasný adresář nebo soubor).
+* **Monkeypatching** (v `pytest`): přepíšeš chování funkce v testu.
+
+```python
+from unittest.mock import patch
+
+@patch("requests.get")
+def test_api(mock_get):
+    mock_get.return_value.status_code = 200
+    # tady testuješ funkci bez volání reálného API
+```
+
+---
+
+### 24. Co je dependency injection a jak se řeší v Pythonu?
+
+* Princip, kdy **objekt nebo funkce dostane své závislosti zvenčí**, ne si je sama vytváří.
+* Zvyšuje testovatelnost a flexibilitu.
+
+```python
+class EmailService:
+    def send(self):
+        print("Odesláno")
+
+class Notifier:
+    def __init__(self, service):
+        self.service = service
+
+    def notify(self):
+        self.service.send()
+
+notifier = Notifier(EmailService())
+notifier.notify()
+```
+
+---
+
+### 25. Jaké znáš návrhové vzory a kdy bys je použila?
+
+* **Singleton** – např. logger nebo konfigurace (viz otázka 15)
+* **Factory** – vytvoření objektu podle typu nebo vstupu
+* **Strategy** – výměna algoritmu za běhu
+* **Observer** – oznámení při změně stavu (např. GUI události)
+
+```python
+class Strategy:
+    def execute(self):
+        pass
+
+class Fast(Strategy):
+    def execute(self):
+        print("rychlá strategie")
+
+class Slow(Strategy):
+    def execute(self):
+        print("pomalá strategie")
+
+# použití
+s = Fast()
+s.execute()
+```
+
+---
+
+### 26. Kdy použít `collections.defaultdict` vs `dict.setdefault`?
+
+* `defaultdict` automaticky vytvoří výchozí hodnotu, pokud klíč chybí.
+* `setdefault` vytvoří výchozí hodnotu **pouze při ručním přístupu**.
+
+```python
+from collections import defaultdict
+
+# defaultdict
+d = defaultdict(list)
+d['a'].append(1)
+
+# setdefault
+x = {}
+x.setdefault('a', []).append(1)
+```
+
+---
+
+### 27. Jaký je rozdíl mezi `pandas` a `numpy`?
+
+| Knihovna | Primární použití                | Vhodné pro                  |
+| -------- | ------------------------------- | --------------------------- |
+| `numpy`  | Práce s číselnými poli (arrays) | vědecké výpočty, matice     |
+| `pandas` | Práce s tabulkovými daty        | analýza, načítání CSV/Excel |
+
+```python
+import numpy as np
+import pandas as pd
+
+arr = np.array([1, 2, 3])
+df = pd.DataFrame({"col1": [1, 2], "col2": [3, 4]})
+```
+
+---
+
+### 28. K čemu slouží `functools.lru_cache`?
+
+* Dekorátor, který **cachuje výsledky funkce** na základě vstupních parametrů.
+* Hodí se pro drahé výpočty s opakovaným vstupem (např. rekurzivní Fibonacci).
+
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-1) + fib(n-2)
+
+print(fib(30))
+```
+
+---
+
 
 
