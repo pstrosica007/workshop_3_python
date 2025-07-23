@@ -40,3 +40,27 @@
 
 ### 11. Rozdělování textu (split)
 2️⃣0️⃣ Napište program, který přijme větu od uživatele a rozdělí ji na jednotlivá slova pomocí `split()`.
+
+
+
+###Bonusové kolo - nerozumim map() - beginner level
+
+#21 Převeď seznam textových čísel na celá čísla (např. ["1", "2", "3"] → [1, 2, 3])
+
+#22 Převeď seznam textových čísel na desetinná čísla
+
+#23 Zvětši každé číslo v seznamu o 10
+
+#24 Zdvojnásob každé číslo v seznamu
+
+#25 Zaokrouhli každé desetinné číslo na 2 desetinná místa
+
+#26 Převeď všechna slova v seznamu na VELKÁ písmena
+
+#27 Zkrať každé jméno na první 3 písmena
+
+#28 Spočítej délku každého slova v seznamu
+
+#29 Přidej 21% DPH ke každé ceně v seznamu
+
+#30 Zjisti, která čísla jsou větší než 100 (výsledkem bude True/False pro každé číslo)
